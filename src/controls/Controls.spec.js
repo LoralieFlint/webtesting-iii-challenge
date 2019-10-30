@@ -1,13 +1,14 @@
 import React from "react";
 import { render } from "react-testing-library";
+import Controls from "./Controls";
 import 'jest-dom/extend-expect';
 
-import Controls from "./Controls";
 
 // Test away!
-test('renders with buttons ', () => {
-    render (<Controls />);
-})
+test('Buttons render correctly', () => {
+    render(<Controls />)
+  })
+
 test('renders buttons properly', () => {
     const { getByText } = render (<Controls />);
     getByText(/close gate/i);
